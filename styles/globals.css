@@ -1,4 +1,8 @@
-:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -104,4 +108,49 @@ a {
   html {
     color-scheme: dark;
   }
+}
+ */
+
+.blurry-gradient {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 50% 22% 40% 80%;
+  filter: blur(40px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(76, 0, 255, 1),
+    rgba(85, 43, 183, 0)
+  );
+  opacity: 0.2;
+}
+
+.blurry-gradientII {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  border-radius: 50% 22% 40% 80%;
+  filter: blur(20px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(76, 0, 255, 1),
+    rgba(85, 43, 183, 0)
+  );
+
+  opacity: 0.2;
+}
+
+.blurry-gradientIII {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  border-radius: 50% 22% 40% 80%;
+  filter: blur(20px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(40, 5, 111),
+    rgba(118, 59, 255, 0)
+  );
+
+  opacity: 0.2;
 }
