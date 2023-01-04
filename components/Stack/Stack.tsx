@@ -20,7 +20,7 @@ export default function Stack() {
       >
         {isGrt768 && <AppParticles></AppParticles>}
         <motion.span
-          className="2xl:text-9xl xl:text-7xl lg:text-6xl  text-4xl"
+          className="2xl:text-9xl xl:text-7xl lg:text-6xl  text-6xl"
           style={{ display: "inline-block", overflow: "hidden" }}
         >
           <motion.div

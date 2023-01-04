@@ -6,7 +6,7 @@ export default function StackIII() {
   const [view, setView] = useState(false);
   const line = "Trusted by companies like";
   return (
-    <div className="h-screen w-full  font-lora lg:text-7xl text-3xl text-black bg-white">
+    <div className="h-screen w-full  font-lora lg:text-7xl text-4xl text-black bg-white">
       <div className="w-full h-full flex items-center justify-center">
         <div className="w-4/5 h-4/5  flex flex-col items-center justify-center">
           <motion.div

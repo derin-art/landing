@@ -13,7 +13,7 @@ export default function MobileStackIV() {
   return (
     <div className="h-fit w-full bg-white flex flex-col text-4xl items-center p-4">
       <div className="font-lora mb-20">Latest Projects</div>
-      <div className="flex flex-col items-center w-full font-lora">
+      <div className="flex flex-col items-center w-full font-poppins">
         {vas.map((item) => {
           return (
             <div key={item.name} className="mb-16 ">
@@ -21,13 +21,13 @@ export default function MobileStackIV() {
                 width={200}
                 alt={item.name}
                 height={200}
-                className="object-cover w-full h-[200px] border rounded-3xl mb-2"
+                className="object-cover w-full h-[250px] border-4 rounded-3xl mb-2"
                 unoptimized={true}
                 src={item.img.src}
               ></Image>
               <div className="text-sm">
                 {" "}
-                <span className="font-loraI">{item.first}</span> {item.name}
+                <span className="font-poppins">{item.first}</span> {item.name}
               </div>
             </div>
           );
