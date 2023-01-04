@@ -1,8 +1,8 @@
 export default function MobileStackI() {
   const dtaa = [1, 2, 3, 4];
   return (
-    <div className="h-fit w-full p-4 sticky top-0 bg-gradient-to-r pt-16 pb-10 from-gray-100 font-lora to-gray-200 flex-col  flex items-center ">
-      <span className="relative flex items-center justify-center font-loraI text-5xl mb-4">
+    <div className="h-screen w-full p-4 sticky top-0 bg-gradient-to-r pt-16 pb-16 from-gray-100 font-lora to-gray-200 flex-col justify-center  flex items-center ">
+      <span className="relative flex items-center justify-center font-loraI text-6xl mb-4">
         {" "}
         <span className="blurry-gradient "></span>i
       </span>
