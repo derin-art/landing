@@ -4,7 +4,7 @@ import Particles from "react-tsparticles";
 
 import { loadFull } from "tsparticles";
 
-export const AppParticles = () => {
+const AppParticles = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
 
@@ -92,3 +92,5 @@ export const AppParticles = () => {
     />
   );
 };
+
+export default AppParticles;

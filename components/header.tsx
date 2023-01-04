@@ -56,7 +56,7 @@ export default function Header() {
               style={{ height: "100vh" }}
             >
               <motion.div
-                className=" w-4/5 h-4/5 z-10 backdrop-blur-sm  bg-black"
+                className=" lg:w-4/5 lg:h-4/5 w-full h-full z-10 backdrop-blur-sm  bg-black"
                 style={{
                   display: "inline-block",
                   overflow: "hidden",
@@ -68,12 +68,15 @@ export default function Header() {
                     open ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100%" }
                   }
                   transition={{ duration: 0.7 }}
-                  className="font-loraI  h-full w-full flex 2xl:p-14 xl:p-8 justify-between lg:p-6"
+                  className="font-loraI  h-full w-full flex 2xl:p-14 xl:p-8 lg:flex-row flex-col items-center lg:items-start p-8 justify-between lg:p-6"
                 >
-                  <div className="flex flex-col 2xl:text-7xl xl:text-6xl lg:text-6xl font-lora text-white ">
+                  <div className="flex flex-col 2xl:text-7xl xl:text-6xl lg:text-6xl text-2xl font-lora text-white">
                     {randoms.map((item) => {
                       return (
-                        <motion.button className="text-left hover:text-slate-400 duration-300">
+                        <motion.button
+                          key={item}
+                          className="text-left hover:text-slate-400 duration-300 lg:p-0 p-4 lg:text-left text-center"
+                        >
                           {item}
                         </motion.button>
                       );

@@ -16,7 +16,7 @@ export default function StackIV() {
   return (
     <div className="h-fit w-full bg-white relative flex  justify-around py-20 ">
       <div className="flex flex-col items-center justify-center w-full h-full">
-        <span className="absolute hidden font-lora text-5xl w-48 h-48  flex border-4 items-center justify-center rounded-full border-black">
+        <span className="absolute font-loraI text-5xl w-48 h-48  xl:flex border-2 items-center justify-center rounded-full border-black">
           i
         </span>{" "}
         <motion.div

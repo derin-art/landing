@@ -154,3 +154,18 @@ a {
 
   opacity: 0.2;
 }
+
+.blurry-gradientIV {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 50% 22% 40% 80%;
+  filter: blur(10px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(86, 43, 170),
+    rgba(118, 59, 255, 0.981)
+  );
+
+  opacity: 0.2;
+}
