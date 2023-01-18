@@ -25,7 +25,7 @@ export default function StackV() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 key={index}
-                className={`lg:text-base text-xs p-4 font-poppins hover:text-indigo-300`}
+                className={`lg:text-base text-xs p-4 font-inter text-gray-500 hover:text-indigo-300`}
               >
                 {item}? <motion.span className="ml-2">+</motion.span>
               </motion.button>
