@@ -32,7 +32,7 @@ export default function StackIII() {
               transition={{ duration: 1 }}
               className="  lg:mb-0 text-right mb-4 w-full text-5xl lg:text-6xl xl:text-7xl"
             >
-              We've <div>Worked</div>
+              We&apos;ve <div>Worked</div>
               <div>With</div>
             </motion.div>
           </motion.div>

@@ -12,7 +12,7 @@ const vas = [
 export default function MobileStackIV() {
   return (
     <div className="h-fit w-full bg-white flex flex-col text-4xl items-center">
-      <div className="font-lora mb-20">Stuff we've worked on</div>
+      <div className="font-lora mb-20">Stuff we&apos;ve worked on</div>
       <div className="flex flex-col items-center w-full font-inter">
         {vas.map((item) => {
           return (
