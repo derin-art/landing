@@ -12,8 +12,10 @@ module.exports = {
         Arsenal: ["var(--Arsenal-font)", "serif"],
         loraI: ["var(--loraI-font)", "serif"],
         poppins: ["var(--poppins-font)", "serif"],
+        inter: ["inter", "sans"],
       },
     },
   },
   plugins: [],
+  important: true,
 };

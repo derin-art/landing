@@ -11,24 +11,20 @@ const vas = [
 ];
 export default function MobileStackIV() {
   return (
-    <div className="h-fit w-full bg-white flex flex-col text-4xl items-center p-4">
-      <div className="font-lora mb-20">Latest Projects</div>
-      <div className="flex flex-col items-center w-full font-poppins">
+    <div className="h-fit w-full bg-white flex flex-col text-4xl items-center">
+      <div className="font-lora mb-20">Stuff we've worked on</div>
+      <div className="flex flex-col items-center w-full font-inter">
         {vas.map((item) => {
           return (
-            <div key={item.name} className="mb-16 ">
+            <div key={item.name} className="h-fit mb-4 p-6 relative ">
               <Image
                 width={200}
                 alt={item.name}
                 height={200}
-                className="object-cover w-full h-[250px] border-4 rounded-3xl mb-2"
+                className="object-cover w-full h-[250px] rounded-lg "
                 unoptimized={true}
                 src={item.img.src}
               ></Image>
-              <div className="text-sm">
-                {" "}
-                <span className="font-poppins">{item.first}</span> {item.name}
-              </div>
             </div>
           );
         })}

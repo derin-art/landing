@@ -47,27 +47,27 @@ export default function Home() {
 
   const coolWords = ["DEAS", "NDIGO"];
 
+  const footer = ["Contact", "Support", "Socials", "Products"];
+
   useEffect(() => {
     setTimeout(() => setBeh(true), 2);
   }, []);
 
   return (
-    <div className="scroll-smooth z-30 w-full h-full font-lora bg-gradient-to-r from-purple-100  to-indigo-200 items-center justify-center">
+    <div className="scroll-smooth z-30 w-full h-full font-lora items-center justify-center">
       <div className="w-full h-full">
         <Stack></Stack>
       </div>
       <div className="w-full lg:h-full h-fit">
-        {isGrt768 && <DynamicHeader></DynamicHeader>}
-        {!isGrt768 && <MobileStackI></MobileStackI>}
+        <MobileStackI></MobileStackI>
       </div>
       <div className="w-full">
-        {isGrt768 && <StackII></StackII>}
-        {!isGrt768 && <MobileStackII></MobileStackII>}
+        <StackII></StackII>
       </div>
       <div className="w-full h-full">
         <StackIII></StackIII>
       </div>
-      <div className="w-full">
+      <div className="w-full hidden">
         {isGrt768 && <StackIV></StackIV>}
         {!isGrt768 && <MobileStackIV></MobileStackIV>}
       </div>
@@ -77,6 +77,23 @@ export default function Home() {
       </div>
       <div className="w-full">
         <StackV></StackV>
+      </div>
+      <div className="bg-black h-screen w-full flex flex-col items-center justify-center p-2 lg:p-8">
+        <div className="flex flex-col space-y-6 w-full">
+          <div className="text-white font-inter w-full text-right lg:text-lg xl:text-2xl">
+            INDIGO
+          </div>
+          {footer.map((item) => {
+            return (
+              <button
+                className="text-white font-inter text-sm w-full lg:text-base xl:text-xl text-left border-b"
+                key={item}
+              >
+                {item} <span className="rotate-45">›</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

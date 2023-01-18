@@ -48,7 +48,7 @@ export default function StackIV() {
                         onMouseLeave={() => {
                           setHover1("");
                         }}
-                        className={`2xl:text-5xl text-4xl font-lora  self-start text-gray-800 ${
+                        className={`2xl:text-5xl text-4xl font-lora  self-start text-black ${
                           item.b ? "-left-20" : "-right-20"
                         }`}
                       >

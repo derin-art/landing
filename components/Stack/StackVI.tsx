@@ -12,7 +12,7 @@ export default function StackVI() {
   ];
 
   return (
-    <div className="h-screen w-full bg-black flex items-center justify-center font-lora 2xl:text-8xl xl:text-8xl lg:text-6xl text-white">
+    <div className="h-screen w-full bg-black flex items-center justify-center font-lora 2xl:text-8xl xl:text-8xl lg:text-6 xl text-white">
       <span className="blurry-gradient "></span>{" "}
       <div className="w-1/3">
         <motion.div>
