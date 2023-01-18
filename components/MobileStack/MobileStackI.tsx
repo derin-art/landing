@@ -60,6 +60,7 @@ export default function MobileStackI() {
       <ReactFlow
         nodes={nodes}
         edges={edges}
+        panOnDrag={false}
         onNodesChange={onNodesChange}
         nodeTypes={nodeTypes}
         fitViewOptions={{ maxZoom: 3 }}
