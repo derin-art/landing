@@ -1,5 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
+import FourthPage from "../components/New/FourthPage";
+import SecondPage from "../components/New/SecondPage";
+import FirstPage from "../components/New/FirstPage";
 import MobileStackI from "../components/MobileStack/MobileStackI";
 import MobileStackII from "../components/MobileStack/MobileStackII";
 import MobileStackIV from "../components/MobileStack/MobileStackIv";
@@ -12,6 +15,7 @@ import StackV from "../components/Stack/StackV";
 import Stack from "../components/Stack/Stack";
 import StackVI from "../components/Stack/StackVI";
 import useMediaQuery from "../hooks/useMediaQuery";
+import ThirdPage from "../components/New/ThirdPage";
 
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
@@ -55,7 +59,15 @@ export default function Home() {
 
   return (
     <div className="scroll-smooth z-30 w-full h-full font-lora items-center justify-center">
-      <div className="w-full h-full">
+      <FirstPage></FirstPage>
+      <SecondPage></SecondPage>
+      <ThirdPage></ThirdPage>
+      <FourthPage></FourthPage>
+    </div>
+  );
+}
+
+/*   <div className="w-full h-full">
         <Stack></Stack>
       </div>
       <div className="w-full lg:h-full h-fit">
@@ -94,7 +106,4 @@ export default function Home() {
             );
           })}
         </div>
-      </div>
-    </div>
-  );
-}
+      </div> */
