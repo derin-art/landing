@@ -20,15 +20,16 @@ export default function ThirdPage() {
     <div className="h-screen w-full bg-stone-100 flex items-center flex-col justify-center relative">
       <div className=" absolute -left-10">
         <div className="font-Neue text-3xl mb-4 ml-12  text-right">
-          Connect with Friends around the world
+          Connect with Friends around the{" "}
+          <span className="text-orangeLow">world</span>
         </div>
         <div className="flex   space-x-2 ">
           {images.map((col, index) => {
             return (
-              <div key={index} className={`${index === 1 ? "mt-8" : ""} `}>
+              <div key={index} className={`${index === 1 ? "mt-8" : ""}  `}>
                 {col.map((img) => {
                   return (
-                    <div>
+                    <div key={img.name} className="">
                       <Image
                         src={img.img.src}
                         key={img.name}
@@ -36,7 +37,7 @@ export default function ThirdPage() {
                         height={120}
                         alt="User Image"
                         unoptimized={true}
-                        className="w-[150px] h-[150px] border rounded-3xl mb-2 border-gray-200"
+                        className="w-[150px] h-[150px] border rounded-3xl shadow-md mb-2 border-gray-200"
                       ></Image>
                     </div>
                   );

@@ -31,7 +31,6 @@ export default function App({ Component, pageProps }) {
       <AnimatedCursor
         innerSize={14}
         outerSize={24}
-        color="192, 132, 252"
         outerAlpha={0.2}
         innerScale={0.7}
         innerStyle={{}}

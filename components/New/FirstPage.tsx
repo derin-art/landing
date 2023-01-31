@@ -1,4 +1,6 @@
 import Gradient_blob from "../../public/Icon/Gradient_blob.svg";
+import DeepOrangeblob from "../../public/Icon/DeepOrange.svg";
+import DeepBlueblob from "../../public/Icon/DeepBlue.svg";
 
 export default function FirstPage() {
   const svsv = () => {
@@ -18,7 +20,7 @@ export default function FirstPage() {
         <path
           d="M86,71Q74,92,50.5,90.5Q27,89,15,69.5Q3,50,16.5,33Q30,16,51,14.5Q72,13,85,31.5Q98,50,86,71Z"
           stroke="none"
-          stroke-width="0"
+          strokeWidth="0"
           fill="url(#fill)"
         ></path>
       </svg>
@@ -49,7 +51,7 @@ export default function FirstPage() {
         <path
           d="M73,64.5Q67,79,52,75.5Q37,72,25.5,61Q14,50,22,32.5Q30,15,51.5,13Q73,11,76,30.5Q79,50,73,64.5Z"
           stroke="none"
-          stroke-width="0"
+          strokeWidth="0"
           fill="url(#fill)"
         ></path>
       </svg>
@@ -91,17 +93,20 @@ export default function FirstPage() {
     );
   };
   return (
-    <div className="h-screen w-full bg-stone-100 flex items-center justify-center">
-      <div className="relative">
-        <div className="absolute -left-10 -top-10">{svsv()}</div>
-        <div className="absolute left-40 ">{svsvHey()}</div>
+    <div className="h-screen w-full bg-transparent flex items-center justify-center z-30 backdrop-blur-lg">
+      <div className="absolute -left-10 -top-10">{svsv()}</div>
+      <img
+        src={DeepOrangeblob.src}
+        className="absolute w-96 h-96 lg:w-[500px] lg:h-[500px] "
+      ></img>
 
-        <img
-          className="absolute -bottom-24 left-10 h-40 w-40 "
-          src={Gradient_blob.src}
-        ></img>
-        <div className="font-Marcel text-5xl px-14 p-10 border border-gray-400 rounded-3xl relative z-30 backdrop-blur-sm">
-          Indigo
+      <img
+        className="absolute -bottom-0 left-10 h-40 w-40 "
+        src={Gradient_blob.src}
+      ></img>
+      <div className="relative w-full h-full flex items-center justify-center backdrop-blur-lg z-30">
+        <div className="font-Marcel text-5xl lg:text-8xl px-14 p-10  relative z-30 backdrop-blur-lg text-white">
+          Ignite
         </div>
       </div>
     </div>

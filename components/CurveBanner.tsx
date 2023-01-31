@@ -10,17 +10,19 @@ export default function CurveBanner() {
     { name: "MacBook", icon: MacBookIcon },
   ];
   return (
-    <div className="w-full flex flex-col items-center justify-center">
-      <motion.div className="flex justify-around w-full">
+    <div className="w-full flex flex-col items-center justify-center overflow-hidden  py-[12px] ">
+      <motion.div
+        initial={{ rotate: 35, x: 50 }}
+        whileInView={{ rotate: 0, x: 0 }}
+        transition={{ duration: 1, type: "spring", mass: 1 }}
+        className="flex justify-around w-full  "
+      >
         {devices.map((item, index) => {
           return (
             <motion.div
-              initial={{ x: -50, rotate: 100 }}
-              whileInView={{ x: 0, rotate: 0 }}
-              transition={{ duration: 0.5 }}
               className={`${
-                index != 1 ? "mt-8" : ""
-              } border p-4 rounded-full bg-white border border-gray-400 h-20 w-20 flex items-center justify-center z-40`}
+                index != 1 ? "mt-10" : ""
+              }  p-4 rounded-full bg-white shadow-m borde border-gray-400 h-20 w-20 flex items-center justify-center z-40`}
               key={item.name}
             >
               {item.icon("fill-gray-800")}
@@ -28,9 +30,6 @@ export default function CurveBanner() {
           );
         })}
       </motion.div>
-      <div className="font-Neue text-3xl mt-4 z-40">
-        We're <span className="text-blueHigh">Every</span>where.
-      </div>
     </div>
   );
 }

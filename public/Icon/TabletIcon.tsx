@@ -2,13 +2,14 @@ export default function TabletIcon(style: string, height = "24", width = "24") {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
       width={width}
       height={height}
+      fill="currentColor"
       className={style}
+      viewBox="0 0 16 16"
     >
-      <path fill="none" d="M0 0h24v24H0z" />
-      <path d="M6 4v16h12V4H6zM5 2h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm7 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+      <path d="M1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4zm-1 8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8z" />
+      <path d="M14 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0z" />
     </svg>
   );
 }

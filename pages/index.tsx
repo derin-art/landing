@@ -1,21 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
 import FourthPage from "../components/New/FourthPage";
+import FifthPage from "../components/New/FifthPage";
 import SecondPage from "../components/New/SecondPage";
 import FirstPage from "../components/New/FirstPage";
-import MobileStackI from "../components/MobileStack/MobileStackI";
-import MobileStackII from "../components/MobileStack/MobileStackII";
-import MobileStackIV from "../components/MobileStack/MobileStackIv";
-import MobileStackVI from "../components/MobileStack/MobileStackVI";
-import StackII from "../components/Stack/StackII";
+import SplineApp from "../components/New/SplineAnimate";
+import SeventhPage from "../components/New/SeventhPage";
 import dynamic from "next/dynamic";
-import StackIII from "../components/Stack/StackIII";
-import StackIV from "../components/Stack/StackIV";
-import StackV from "../components/Stack/StackV";
-import Stack from "../components/Stack/Stack";
-import StackVI from "../components/Stack/StackVI";
+import StackUp from "../components/StackUp";
 import useMediaQuery from "../hooks/useMediaQuery";
 import ThirdPage from "../components/New/ThirdPage";
+import Alt from "../public/images/Alt.jpg";
 
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
@@ -63,6 +58,39 @@ export default function Home() {
       <SecondPage></SecondPage>
       <ThirdPage></ThirdPage>
       <FourthPage></FourthPage>
+      <FifthPage></FifthPage>
+      <div className="flex flex-col items-center relative justify-center h-screen overflow-hidden w-full bg-white">
+        <div className="absolute top-20 text-3xl font-Neue left-2">
+          Built to be to <span className="text-orangeLow">powerful</span> and{" "}
+          <span className="text-blueLow">flexible</span>
+        </div>
+        <StackUp></StackUp>
+      </div>
+      <div className="h-screen w-full flex items-center justify-center overflow-hidden">
+        <div className="absolute text-3xl z-40 font-Neue text-black">
+          Built to be secure
+        </div>
+        <Image
+          unoptimized={true}
+          src={Alt.src}
+          width={400}
+          height={400}
+          className=" scale-[2.3]"
+          alt="Padlock Image"
+        ></Image>
+      </div>
+      <div
+        className="w-full  flex flex-col
+      items-center justify-center  h-full relative overflow-hidden"
+      >
+        <div className="absolute top-20 font-Neue text-3xl right-2 text-right w-4/5">
+          Api's <span className="text-blueLow">Used</span> by the industries{" "}
+          <span className="text-orangeLow">best</span>
+        </div>
+        <div className="w-full">
+          <SeventhPage></SeventhPage>
+        </div>
+      </div>
     </div>
   );
 }

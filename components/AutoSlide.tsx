@@ -33,16 +33,16 @@ export default function Auto(props: AutoPropsType) {
   const autoPlayArray = [
     {
       button: "Formal Casual",
-      name: "SHIRTS",
+      name: "Gaming",
     },
 
     {
       button: "TShirts",
-      name: "T-SHIRTS",
+      name: "Soccer",
     },
     {
       button: "Varsity",
-      name: "Billy",
+      name: "Rendering",
       blue: true,
     },
   ];
@@ -77,15 +77,15 @@ export default function Auto(props: AutoPropsType) {
         }}
         interval={1000}
         enableMouseEvents={true}
-        className="w-[250px] border rounded-br-2xl rounded-tr-2xl bg-white"
+        className="w-[250px] border rounded-br-2xl rounded-tr-2xl bg-white shadow-lg"
       >
         {autoPlayArray.map((item) => {
           return (
             <div
               key={item.name}
-              className={`h-fit w-54 font-Neue text-sm p-2  rounded-2xl `}
+              className={`h-fit w-54 font-Neue text-sm p-4  rounded-2xl `}
             >
-              <div className="font-Inter text-xs">{item.name}</div>
+              <div className="font-Inter text-[9px]">{item.name}</div>
               {gibber([2, 8, 4, 6])}
             </div>
           );

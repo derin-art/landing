@@ -25,7 +25,7 @@ export default function PhoneDisplay() {
           {BatteryIcon("fill-green-400 absolute right-8", "14", "14")}
         </div>
         <div className="text-3xl absolute font-Neue top-14 left-[32px]">
-          Connect with <span className="text-purple-400">friends</span> with
+          Connect with <span className="text-orangeLow">friends</span> with
           similiar <span className="text-blue-400">interest</span>
         </div>
         <div className="absolute left-6">

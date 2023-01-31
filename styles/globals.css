@@ -205,3 +205,82 @@ a {
   font-family: Neue;
   src: url("../public/fonts/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Regular.otf");
 }
+
+.someB {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(44, 44, 64, 0.5663515406162465) 35%,
+    rgba(221, 120, 18, 0.6727941176470589) 100%
+  );
+}
+
+.container {
+  position: relative;
+
+  background: rgba(0, 0, 0, 0);
+  transform: rotate(-30deg) skew(25deg) scale(0.8);
+  transition: 0.5s;
+}
+
+.Uncontainer {
+  position: relative;
+
+  background: rgba(0, 0, 0, 0);
+  transform: rotate(-30deg) skew(25deg) scale(0.8);
+  transition: 0.5s;
+}
+
+.sContainer {
+  position: relative;
+
+  background: rgba(0, 0, 0, 0);
+  transform: rotate(-30deg) skew(25deg) scale(0.8);
+  transition: 0.5s;
+}
+
+.Uncontainer div {
+  position: absolute;
+
+  transition: 0.5s;
+}
+
+.container div {
+  position: absolute;
+
+  transition: 0.5s;
+}
+.container div:nth-child(4) {
+  transform: translate(160px, -160px);
+  opacity: 1;
+}
+.container div:nth-child(3) {
+  transform: translate(120px, -120px);
+  opacity: 1;
+}
+.container div:nth-child(2) {
+  transform: translate(80px, -80px);
+  opacity: 1;
+}
+.container div:nth-child(1) {
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+.stackDiv {
+  height: 80vw;
+  width: 80vw;
+}
+
+.stackDivC {
+  height: 30vw;
+  width: 30vw;
+}
+
+.behindImage {
+  mix-blend-mode: difference;
+}
+
+.marScreen {
+  width: 105%;
+}
