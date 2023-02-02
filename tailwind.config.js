@@ -8,7 +8,7 @@ module.exports = {
 
   theme: {
     screens: {
-      xs: "570px",
+      xs: "340px",
       ...defaultTheme.screens,
     },
     extend: {
@@ -26,6 +26,9 @@ module.exports = {
         orangeLow: "#ff8526",
         blueLow: "#3027de",
         blueHigh: "#7b8cff",
+        venomLime: "#4cf7029e",
+        ultraGray: "#242424",
+        ultraBlack: "#1a1a1a",
       },
     },
   },

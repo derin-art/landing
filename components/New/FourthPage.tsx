@@ -3,8 +3,10 @@ import WifiIcon from "../../public/Icon/wifiIcon";
 import BatteryIcon from "../../public/Icon/batteryIcon";
 import { motion } from "framer-motion";
 import CurveBanner from "../CurveBanner";
-
+import SpeedBanner from "../SpeedBanner";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+const Speedometer = dynamic(() => import("./Speedometer"), { ssr: false });
 
 export default function FourthPage() {
   const svsvHey = () => {
@@ -42,14 +44,25 @@ export default function FourthPage() {
     );
   };
   return (
-    <div className="h-screen w-full flex items-center justify-center overflow-y-hidden relative">
-      <div className="absolute top-16 w-full">
-        {" "}
-        <CurveBanner></CurveBanner>
+    <div className="h-screen bg-ultraBlack overflow-hidden w-full  flex flex-col  items-center z-0 justify-center border  relative ">
+      <div className="font-Neue text-3xl w-full p-2 flex flex-col text-white">
+        Available{" "}
+        <div className="self-end border-2 w-fit p-2 rounded-full text-venomLime border-gray-600">
+          no matter
+        </div>{" "}
+        your speed
       </div>
-      <motion.div className="-bottom-[340px] absolute flex flex-col">
-        <div className="relative w-fit  flex items-around justify-center flex-col ">
-          <div className="text-[650px] text-stone-100  mt-40  font-Inter  flex flex-col items-center justify-center  relative">
+
+      <Speedometer></Speedometer>
+
+      <motion.div
+        initial={{ rotate: 35, x: 50 }}
+        whileInView={{ rotate: 0, x: 0 }}
+        transition={{ duration: 1, type: "spring", mass: 1 }}
+        className="-bottom-[340px] absolute flex flex-col w-full items-center overflow-hidden hidden "
+      >
+        <div className="relative w-fit  flex items-around justify-center flex-col hidden">
+          <div className="text-[650px] text-stone-100  mt-40  font-Inter  xl:scale-[1.14]  flex flex-col items-center justify-center  relative">
             <motion.div
               animate={{ rotate: 360 }}
               initial={{ rotate: 0 }}

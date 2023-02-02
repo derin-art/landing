@@ -19,7 +19,7 @@ export default function SeventhPage() {
           {stacks.map((Item, index) => {
             return (
               <div
-                className={`p-4 rounded-3xl border border-gray-200 bg-opacity-25 bg-white flex items-center justify-center stackDivC`}
+                className={`p-4 rounded-3xl border border-gray-400 bg-opacity-25 bg-white flex items-center justify-center stackDivC`}
                 key={Item.name}
               >
                 {Item.icon("fill-blueHigh", "60", "60")}

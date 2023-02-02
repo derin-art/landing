@@ -7,8 +7,7 @@ export default function FirstPage() {
     return (
       <svg
         viewBox="0 0 100 100"
-        height={"100"}
-        width={"100"}
+        className="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -93,19 +92,24 @@ export default function FirstPage() {
     );
   };
   return (
-    <div className="h-screen w-full bg-transparent flex items-center justify-center z-30 backdrop-blur-lg">
-      <div className="absolute -left-10 -top-10">{svsv()}</div>
-      <img
-        src={DeepOrangeblob.src}
-        className="absolute w-96 h-96 lg:w-[500px] lg:h-[500px] "
-      ></img>
+    <div className="h-screen w-full bg-orangeLow flex  items-center justify-center z-30 backdrop-blur-lg">
+      <div className="w-3/6 h-3/5 bg-white absolute right-40 rounded-3xl z-30 hidden"></div>
+      <div className="hidden">
+        <div className="absolute left-10 top-10">{svsv()}</div>
 
-      <img
-        className="absolute -bottom-0 left-10 h-40 w-40 "
-        src={Gradient_blob.src}
-      ></img>
-      <div className="relative w-full h-full flex items-center justify-center backdrop-blur-lg z-30">
-        <div className="font-Marcel text-5xl lg:text-8xl px-14 p-10  relative z-30 backdrop-blur-lg text-white">
+        <img
+          src={DeepOrangeblob.src}
+          className="absolute w-96 h-96 lg:w-[500px] lg:h-[500px] xl:w-[700px] xl:h-[700px]  top-10 left-40"
+        ></img>
+
+        <img
+          className="absolute -bottom-0 right-10 lg:right-0 h-40 w-40 lg:w-96 lg:h-96 hidden "
+          src={Gradient_blob.src}
+        ></img>
+      </div>
+      <div className="text-white text-6xl top-20 left-20 absolute">1gnite</div>
+      <div className="relative hidden w-full h-full flex items-center justify-center backdrop-blur-lg z-30">
+        <div className="font-Marcel text-5xl lg:text-6xl px-14 p-10  relative z-30 backdrop-blur-lg text-white">
           Ignite
         </div>
       </div>

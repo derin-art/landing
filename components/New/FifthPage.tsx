@@ -110,13 +110,24 @@ export default function FifthPage() {
   ];
   console.log("trigger", trigger);
   return (
-    <div className="h-screen w-full bg-stone-100 flex items-center justify-center flex-col overflow-hidden">
+    <div className="h-screen w-full z-30 bg-stone-100 flex items-center justify-center flex-col overflow-hidden">
       <div className="font-Neue mb-2 text-3xl z-30">
         We mean <span className="text-blueLow">Every</span>where
       </div>
 
-      <img className="absolute" src={blobAnimation.src}></img>
-      <div className="flex  space-x-2">
+      <img
+        className="absolute lg:w-[400px] lg:h-[400px]"
+        src={blobAnimation.src}
+      ></img>
+      <motion.div
+        onViewportEnter={() => {
+          setTrigger(true);
+        }}
+        onViewportLeave={() => {
+          setTrigger(false);
+        }}
+        className="flex  space-x-2"
+      >
         {svgPaths.map((item, index) => {
           return (
             <div key={index} className="flex-col flex space-y-2">
@@ -124,23 +135,14 @@ export default function FifthPage() {
                 return (
                   <div
                     key={svg.name}
-                    className=" p-6 z-40 rounded-3xl bg-white bg-opacity-25 border "
+                    className=" p-6 lg:p-8 z-40 rounded-3xl bg-white bg-opacity-25 border border-gray-400"
                   >
                     <motion.svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       width="50"
                       height="50"
-                      className="fill-transparent "
-                      onViewportEnter={() => {
-                        setTrigger(true);
-                      }}
-                      onViewportLeave={() => {
-                        setTrigger(false);
-                      }}
-                      viewport={{
-                        once: false,
-                      }}
+                      fill="none"
                     >
                       <path fill="rgba(255, 255, 255, 0)" d="M0 0h24v24H0z" />
                       <motion.path
@@ -161,74 +163,9 @@ export default function FifthPage() {
             </div>
           );
         })}
-      </div>
-      <div className="text-xs mt-4 text-center font-Inter px-4 ">
+      </motion.div>
+      <div className="text-xs mt-4 text-center font-Inter px-8 ">
         Click on the icons to navigate to download their dedicated app
-      </div>
-      <div className="hidden">
-        <motion.img
-          animate={{ rotate: 360 }}
-          initial={{ rotate: 0 }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: [1, 2, 5, 10],
-          }}
-          src={GradientBlob.src}
-          className="w-40 h-40 hidden"
-        ></motion.img>
-        <motion.svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="200"
-          height="200"
-          className="fill-white"
-        >
-          <path fill="white" d="M0 0h24v24H0z" />
-          <motion.path
-            stroke="rgba(255, 255, 25, 1)"
-            strokeLinecap="round"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 4, repeat: Infinity }}
-            d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM8.823 15.343l-.79 1.37a.823.823 0 1 1-1.428-.822l.589-1.016c.66-.206 1.201-.048 1.629.468zM13.21 8.66l2.423 4.194h2.141a.82.82 0 0 1 .823.822.82.82 0 0 1-.823.823h-1.19l.803 1.391a.824.824 0 0 1-1.427.823l-3.04-5.266c-.69-1.19-.198-2.383.29-2.787zm.278-3.044c.395.226.528.73.302 1.125l-3.528 6.109h2.553c.826 0 1.29.972.931 1.645h-7.48a.82.82 0 0 1-.822-.823.82.82 0 0 1 .822-.822h2.097l2.685-4.653-.838-1.456a.824.824 0 0 1 1.427-.823l.359.633.367-.633a.823.823 0 0 1 1.125-.302z"
-          />
-        </motion.svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="100"
-          height="100"
-          className="fill-white"
-        >
-          <path fill="white" d="M0 0h24v24H0z" />
-          <motion.path
-            stroke="rgba(255, 255, 25, 1)"
-            strokeLinecap="round"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 4, repeat: Infinity }}
-            d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zM8.823 15.343c-.395-.477-.886-.647-1.479-.509l-.15.041-.59 1.016a.823.823 0 0 0 1.366.916l.062-.093.79-1.371zM13.21 8.66c-.488.404-.98 1.597-.29 2.787l3.04 5.266a.824.824 0 0 0 1.476-.722l-.049-.1-.802-1.392h1.19a.82.82 0 0 0 .822-.823.82.82 0 0 0-.72-.816l-.103-.006h-2.14L13.44 9.057l-.23-.396zm.278-3.044a.825.825 0 0 0-1.063.21l-.062.092-.367.633-.359-.633a.824.824 0 0 0-1.476.722l.049.1.838 1.457-2.685 4.653H6.266a.82.82 0 0 0-.822.822c0 .421.312.766.719.817l.103.006h7.48c.34-.64-.06-1.549-.81-1.638l-.121-.007h-2.553l3.528-6.11a.823.823 0 0 0-.302-1.124z"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="70"
-          height="70"
-          className="fill-white"
-        >
-          <path fill="none" d="M0 0h24v24H0z" />
-          <motion.path
-            stroke="rgb(82 82 82)"
-            strokeLinecap="round"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 4, repeat: Infinity }}
-            d="M4.797 15.485c1.124-2.52 3.2-5.44 4.487-6.962-1.248-1.246-2.162-1.931-2.818-2.3A7.977 7.977 0 0 0 4 12c0 1.25.286 2.432.797 3.485zm4.051-10.84C10.448 5.05 12 5.959 12 5.959v-.005s1.552-.904 3.151-1.31A7.974 7.974 0 0 0 12 4c-1.12 0-2.185.23-3.152.645zm8.686 1.578c-.655.37-1.568 1.055-2.816 2.3 1.287 1.523 3.362 4.441 4.486 6.961A7.968 7.968 0 0 0 20 12c0-2.27-.946-4.32-2.466-5.777zm.408 11.133c-1.403-2.236-4.09-4.944-5.942-6.343-1.85 1.4-4.539 4.108-5.941 6.345A7.98 7.98 0 0 0 12 20a7.98 7.98 0 0 0 5.942-2.644zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
-          />
-        </svg>
-        ;
       </div>
     </div>
   );

@@ -272,6 +272,11 @@ a {
   width: 80vw;
 }
 
+.stackDivLg {
+  height: 30vw;
+  width: 30vw;
+}
+
 .stackDivC {
   height: 30vw;
   width: 30vw;
@@ -283,4 +288,194 @@ a {
 
 .marScreen {
   width: 105%;
+}
+
+.containerLg div {
+  position: absolute;
+
+  transition: 0.5s;
+}
+.containerLg div:nth-child(4) {
+  transform: translate(280px, -280px);
+  opacity: 1;
+}
+.containerLg div:nth-child(3) {
+  transform: translate(200px, -200px);
+  opacity: 1;
+}
+.containerLg div:nth-child(2) {
+  transform: translate(120px, -120px);
+  opacity: 1;
+}
+.containerLg div:nth-child(1) {
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+
+.containerLg {
+  position: relative;
+
+  background: rgba(0, 0, 0, 0);
+  transform: rotate(-30deg) skew(25deg) scale(0.8);
+  transition: 0.5s;
+}
+
+.UncontainerLg div {
+  position: absolute;
+
+  transition: 0.5s;
+}
+
+.UncontainerLg {
+  position: relative;
+
+  background: rgba(0, 0, 0, 0);
+  transform: rotate(-30deg) skew(25deg) scale(0.8);
+  transition: 0.5s;
+}
+
+.api {
+  position: relative;
+
+  background: rgba(0, 0, 0, 0);
+  transform: rotate(-30deg) skew(25deg) scale(0.8);
+  transition: 0.5s;
+}
+
+/* body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+} */
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200vw;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+
+@layer components {
+  .phone {
+    @apply lg:hidden block;
+  }
+  .phoneCol {
+    @apply lg:hidden flex flex-col;
+  }
+  .tab {
+    @apply hidden lg:block;
+  }
+  .hoverG {
+    @apply hover:bg-gray-200 duration-300;
+  }
+}
+
+.crossBg {
+  background-image: linear-gradient(#dcdce5 0.5px, transparent 0.5px),
+    linear-gradient(to right, #dcdce5 0.5px, transparent 0.5px);
+  background-size: 75px 75px;
+  background-color: #47d4ff00;
+}
+
+.lime {
+  color: #4cf7029e;
+}
+
+.clio {
+  clip-path: polygon(60% 0, 60% 95%, 50% 100%, 40% 95%);
+}
+
+.clio1 {
+  clip-path: polygon(50% 0%, 55% 95%, 50% 100%, 50% 100%);
+}
+
+.wrapper {
+  display: table;
+  margin: 0 auto;
+  background: rgba(21, 34, 46, 0.25);
+  padding: 35px 40px 40px;
+  border-radius: 6px;
+  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.32), 0 1px 9px -1px #15222e;
+}
+
+.wrapper-header {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.74);
+  margin: 30px 0 15px;
+  font-weight: normal;
+}
+
+.heart {
+  margin: 0 8px;
+  display: inline-block;
+  animation: simplePulse ease-in-out 1.1s infinite;
+}
+
+.fade {
+  position: absolute;
+  bottom: 0px;
+
+  display: block;
+
+  width: 100%;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    hsla(102, 98%, 49%, 0.1) 100%
+  );
+}
+
+.fadeI {
+  background-image: linear-gradient(
+    to bottom,
+    hsla(102, 98%, 49%, 1),
+    hsla(102, 98%, 49%, 0) 100%
+  );
 }
