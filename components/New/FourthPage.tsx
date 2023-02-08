@@ -44,17 +44,25 @@ export default function FourthPage() {
     );
   };
   return (
-    <div className="h-screen bg-ultraBlack overflow-hidden w-full  flex flex-col  items-center z-0 justify-center border  relative ">
-      <div className="font-Neue text-3xl w-full p-2 flex flex-col text-white">
+    <div className="h-screen bg-ultraBlack overflow-hidden w-full  flex flex-col  items-center z-0 justify-center  relative ">
+      <div className="font-Neue z-30 text-3xl w-full xl:w-3/5  xl:left-10 p-4 flex flex-col text-white absolute top-16 lg:text-6xl">
         Available{" "}
-        <div className="self-end border-2 w-fit p-2 rounded-full text-venomLime border-gray-600">
-          no matter
+        <div className="self-end border backdrop-blur-sm w-fit xl:w-full text-right p-2 px-4 rounded-full text-venomLime border-gray-700">
+          No matter
         </div>{" "}
         your speed
       </div>
+      <div className="fadeI h-10 w-full absolute bottom-0 z-30 xl:hidden"></div>
+      <div className="fadeII h-full w-14 right-0 absolute bottom-0 z-30 hidden xl:block "></div>
 
-      <Speedometer></Speedometer>
-
+      <div className=" xl:hidden  w-full h-3/5 absolute -bottom-20 xsm:-bottom-1/4 lg:bottom-0 xl:rotate-90 xl:h-full  ">
+        <SpeedBanner></SpeedBanner>
+        <Speedometer></Speedometer>
+      </div>
+      <div className="xl:block hidden wiH  absolute top-0 propRight xl:-rotate-90 h-full  ">
+        <SpeedBanner></SpeedBanner>
+        <Speedometer></Speedometer>
+      </div>
       <motion.div
         initial={{ rotate: 35, x: 50 }}
         whileInView={{ rotate: 0, x: 0 }}

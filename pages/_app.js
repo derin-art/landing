@@ -29,11 +29,17 @@ export default function App({ Component, pageProps }) {
   return (
     <Wrapper>
       <AnimatedCursor
-        innerSize={14}
-        outerSize={24}
+        innerSize={20}
+        outerSize={34}
         outerAlpha={0.2}
         innerScale={0.7}
-        innerStyle={{}}
+        innerStyle={{
+          filter: "blur(3px)",
+          backgroundColor: "var(--cursor-color)",
+        }}
+        outerStyle={{
+          filter: "blur(3px)",
+        }}
         outerScale={5}
         clickables={[
           "a",

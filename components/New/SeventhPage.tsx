@@ -15,26 +15,26 @@ export default function SeventhPage() {
   return (
     <div className="sContainer marScreen overflow-hidden mb-6">
       <Marquee speed={100} className=" flex flex-col  ">
-        <motion.div className="flex">
+        <motion.div className="lg:flex hidden">
           {stacks.map((Item, index) => {
             return (
               <div
-                className={`p-4 rounded-3xl border border-gray-400 bg-opacity-25 bg-white flex items-center justify-center stackDivC`}
+                className={`p-4 rounded-3xl border border-black bg-opacity-25 bg-white flex items-center justify-center stackDivCLg`}
                 key={Item.name}
               >
-                {Item.icon("fill-blueHigh", "60", "60")}
+                {Item.icon("fill-gray-800", "60", "60")}
               </div>
             );
           })}
         </motion.div>
-        <motion.div className="border hidden">
+        <motion.div className="border lg:hidden flex">
           {stacks.map((Item, index) => {
             return (
               <div
-                className={`p-4 border rounded-3xl bg-opacity-25 bg-white flex items-center justify-center stackDivC`}
+                className={`p-4 border border-black rounded-3xl bg-opacity-25 bg-white flex items-center justify-center stackDivC`}
                 key={Item.name}
               >
-                {Item.icon("fill-blueHigh", "60", "60")}
+                {Item.icon("fill-gray-800", "60", "60")}
               </div>
             );
           })}

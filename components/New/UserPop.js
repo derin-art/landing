@@ -7,7 +7,11 @@ import LeaderLine from "react-leader-line";
 import { useEffect, useRef, forwardRef, useState } from "react";
 import GlobeIcon from "../../public/Icon/globeIcon";
 import Image from "next/image";
-import Xarrow, { Xwrapper, useXarrow } from "react-xarrows";
+import dynamic from "next/dynamic";
+
+const Xarrow = dynamic(() => import("react-xarrows"), {
+  ssr: false,
+});
 
 export default function UserPop() {
   const startRef = useRef(null);

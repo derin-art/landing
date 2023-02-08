@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import MenuIcon from "../public/Icon/MenuIcon";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -22,18 +23,21 @@ export default function Header() {
   const randoms = ["Contact", "Products", "About", "Api"];
   const things = ["menu"];
   return (
-    <div className="flex relative  p-2 font-inter text-sm bg-transparent items-center justify-center ">
+    <div className="flex relative  p-2 font-inter text-sm backdrop-blur-sm border-b border-ultraGray h-10 items-center justify-center ">
       <div
         className={`absolute h-screen w-full bg-black top-0 lg:hidden duration-300 ${
           !open ? "translate-x-full" : "-translate-x-0"
         }`}
       >
-        <div className="pt-20 font-inter p-4">
-          <div className="text-white w-full">Indigo</div>
-          <div className="space-y-6 mt-2 flex flex-col text-zinc-400  text-xs ">
+        <div className="pt-20 font-Neue p-4">
+          <div className="text-white w-full text-base">Ignite</div>
+          <div className="space-y-6 mt-2 flex flex-col text-zinc-400  text-base ">
             {randoms.map((item) => {
               return (
-                <button className="border-b" key={item}>
+                <button
+                  className="text-right border p-2 w-fit px-4 flex items-center justify-center self-end rounded-full border-ultraGray"
+                  key={item}
+                >
                   {item}
                 </button>
               );
@@ -56,9 +60,15 @@ export default function Header() {
           );
         })}
       </div>
-      <div className="absolute left-4 top-2 text-gray-400 font-loraI">
-        indigo
+      <div className="absolute left-4 top-2 font-Neue text-venomLime">
+        Ignite
       </div>
+      <Link
+        className="absolute left-20 top-1 font-Neue p-1 border border-ultraGray bg-venomLime rounded-full"
+        href={"/Dev"}
+      >
+        Real Link - Navigate to dev's page
+      </Link>
 
       <AnimatePresence>
         <motion.div
@@ -75,7 +85,7 @@ export default function Header() {
               style={{ height: "100vh" }}
             >
               <motion.div
-                className=" lg:w-4/5 lg:h-4/5 w-full h-full z-10 backdrop-blur-sm  bg-black"
+                className=" lg:w-4/5 lg:h-4/5 w-full h-full z-10 backdrop-blur-sm  bg-ultraBlack"
                 style={{
                   display: "inline-block",
                   overflow: "hidden",
@@ -87,14 +97,14 @@ export default function Header() {
                     open ? { opacity: 1, y: 0 } : { opacity: 1, y: "-100%" }
                   }
                   transition={{ duration: 0.7 }}
-                  className="font-loraI  h-full w-full flex 2xl:p-14 xl:p-8 lg:flex-row flex-col items-center lg:items-start p-8 justify-between lg:p-6"
+                  className="font-Neue  h-full w-full flex 2xl:p-14 xl:p-8 lg:flex-row flex-col items-center lg:items-start p-8 justify-between lg:p-6"
                 >
-                  <div className="flex flex-col 2xl:text-7xl xl:text-6xl lg:text-6xl text-2xl font-lora text-white">
+                  <div className="flex flex-col 2xl:text-6xl xl:text-6xl lg:text-6xl text-2xl font-Neue text-white">
                     {randoms.map((item) => {
                       return (
                         <motion.button
                           key={item}
-                          className="text-left hover:text-slate-400 duration-300 lg:p-0 p-4 lg:text-left text-center"
+                          className="text-left hover:text-slate-400 duration-300 p-4 mb-4 border-ultraGray flex items-center justify-start lg:text-left text-center rounded-full border"
                         >
                           {item}
                         </motion.button>
@@ -102,7 +112,7 @@ export default function Header() {
                     })}
                   </div>
                   <div className="text-white 2xl:text-7xl xl:text-6xl lg:text-6xl">
-                    iNDIGO
+                    iGNITE
                   </div>
                 </motion.div>
               </motion.div>

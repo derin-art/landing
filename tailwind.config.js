@@ -1,14 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
+const withTM = require("next-transpile-modules")(["three"]);
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-
+  withTM: withTM(),
   theme: {
     screens: {
       xs: "340px",
+      xsm: "365px",
       ...defaultTheme.screens,
     },
     extend: {

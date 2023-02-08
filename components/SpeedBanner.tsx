@@ -18,29 +18,24 @@ export default function SpeedBanner() {
             <motion.div
               className={`${
                 index != 1 ? "mt-10" : ""
-              }   rounded-2xl bg-venomLime   backdrop-blur-lg relative border-ultraGray borde h-20 w-20 flex items-center justify-center `}
+              }   rounded-2xl  relative border-ultraGray border h-20 w-20 flex items-center justify-center `}
               key={item.name}
             >
-              {item.icon("fill-venomLime z-40", "40", "40")}
+              {item.icon("fill-white z-40", "30", "30")}
             </motion.div>
           );
         })}
       </motion.div>
-      <motion.div
-        initial={{ rotate: 35, x: 50 }}
-        whileInView={{ rotate: 0, x: 0 }}
-        transition={{ duration: 1, type: "spring", mass: 1.7 }}
-        className="lg:flex justify-around w-full hidden py-10"
-      >
+      <motion.div className="lg:flex justify-around w-full hidden py-10">
         {devices.map((item, index) => {
           return (
             <motion.div
               className={`${
                 index != 1 ? "mt-10" : ""
-              }  p-4 rounded-2xl bg-white  border  shadow-m border-gray-400 h-20 w-20 flex items-center justify-center z-40`}
+              }  p-4 rounded-2xl   border  shadow-m border-gray-800 h-20 w-20 flex items-center justify-center z-40`}
               key={item.name}
             >
-              {item.icon("fill-gray-800", "40", "40")}
+              {item.icon("fill-white", "40", "40")}
             </motion.div>
           );
         })}

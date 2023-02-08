@@ -111,6 +111,11 @@ a {
 }
  */
 
+:root {
+  --cursor-color: rgb(226, 46, 46);
+  --blur: 3px;
+}
+
 .blurry-gradient {
   width: 200px;
   height: 200px;
@@ -277,9 +282,19 @@ a {
   width: 30vw;
 }
 
-.stackDivC {
+.stackDivXl {
   height: 30vw;
   width: 30vw;
+}
+
+.stackDivCLg {
+  height: 30vw;
+  width: 30vw;
+}
+
+.stackDivC {
+  height: 50vw;
+  width: 50vw;
 }
 
 .behindImage {
@@ -293,7 +308,7 @@ a {
 .containerLg div {
   position: absolute;
 
-  transition: 0.5s;
+  transition: 0.8s;
 }
 .containerLg div:nth-child(4) {
   transform: translate(280px, -280px);
@@ -317,7 +332,7 @@ a {
 
   background: rgba(0, 0, 0, 0);
   transform: rotate(-30deg) skew(25deg) scale(0.8);
-  transition: 0.5s;
+  transition: 0.8s;
 }
 
 .UncontainerLg div {
@@ -340,6 +355,10 @@ a {
   background: rgba(0, 0, 0, 0);
   transform: rotate(-30deg) skew(25deg) scale(0.8);
   transition: 0.5s;
+}
+
+.trueWhite {
+  background: rgba(0, 0, 0, 0);
 }
 
 /* body {
@@ -423,7 +442,7 @@ a {
 }
 
 .lime {
-  color: #4cf7029e;
+  color: rgba(76, 247, 2, 0.62);
 }
 
 .clio {
@@ -475,7 +494,49 @@ a {
 .fadeI {
   background-image: linear-gradient(
     to bottom,
-    hsla(102, 98%, 49%, 1),
-    hsla(102, 98%, 49%, 0) 100%
+    #4cf70200,
+    rgb(76, 247, 2, 0.4) 100%
   );
+}
+
+.fadeIII {
+  background-image: linear-gradient(
+    to bottom,
+    #4cf70200,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.fadeII {
+  background-image: linear-gradient(
+    to right,
+    #4cf70200,
+    rgb(76, 247, 2, 0.2) 100%
+  );
+}
+
+.propRight {
+  right: -20vh;
+}
+
+.wiH {
+  width: 125vh;
+}
+
+.dd {
+  filter: blur(5px);
+}
+
+.textM {
+  font-size: 10rem;
+}
+
+.stackH {
+  height: 100vh;
+}
+
+@media only screen and (min-width: 600px) {
+  .stackH {
+    height: 100vh;
+  }
 }

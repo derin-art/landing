@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "@react-three/drei": "^9.56.17",
+    "@react-three/fiber": "^8.11.0",
     "@splinetool/loader": "^0.9.202",
     "@splinetool/react-spline": "^2.2.5",
     "@splinetool/runtime": "^0.9.202",
@@ -18,6 +20,7 @@
     "@types/react-dom": "18.0.10",
     "@types/react-swipeable-views": "^0.13.1",
     "@types/react-swipeable-views-utils": "^0.13.4",
+    "@types/three": "^0.149.0",
     "chart.js": "^4.1.1",
     "chartjs-plugin-datalabels": "^2.2.0",
     "eslint": "8.31.0",
@@ -38,11 +41,13 @@
     "react-tsparticles": "^2.7.1",
     "react-xarrows": "^2.0.2",
     "reactflow": "^11.4.2",
+    "three": "^0.149.0",
     "tsparticles": "^2.7.1",
     "typescript": "4.9.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "next-transpile-modules": "^10.0.0",
     "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4"
   }

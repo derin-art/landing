@@ -110,9 +110,13 @@ export default function FifthPage() {
   ];
   console.log("trigger", trigger);
   return (
-    <div className="h-screen w-full z-30 bg-stone-100 flex items-center justify-center flex-col overflow-hidden">
-      <div className="font-Neue mb-2 text-3xl z-30">
-        We mean <span className="text-blueLow">Every</span>where
+    <div className="h-screen crossBg w-full z-30 bg-stone-100 flex items-center justify-center flex-col overflow-hidden">
+      <div className="font-Neue mb-10 text-3xl lg:text-6xl z-30">
+        Available{" "}
+        <span className="text-venomLime border p-2 rounded-full flex items-center justify-center border-ultraGray mr-2">
+          Across{" "}
+        </span>{" "}
+        platforms
       </div>
 
       <img
@@ -133,9 +137,9 @@ export default function FifthPage() {
             <div key={index} className="flex-col flex space-y-2">
               {item.map((svg) => {
                 return (
-                  <div
+                  <button
                     key={svg.name}
-                    className=" p-6 lg:p-8 z-40 rounded-3xl bg-white bg-opacity-25 border border-gray-400"
+                    className=" p-6 lg:p-8 z-40 rounded-3xl bg-white hover:bg-gray-300 hover:bg-opacity-25 duration-300 bg-opacity-25 border border-gray-400"
                   >
                     <motion.svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +150,7 @@ export default function FifthPage() {
                     >
                       <path fill="rgba(255, 255, 255, 0)" d="M0 0h24v24H0z" />
                       <motion.path
-                        stroke="rgb(82 82 82)"
+                        stroke="rgb(87 83 78)"
                         strokeWidth={0.5}
                         strokeLinecap="round"
                         initial={{ pathLength: 0 }}
@@ -157,14 +161,14 @@ export default function FifthPage() {
                         d={svg.path}
                       />
                     </motion.svg>
-                  </div>
+                  </button>
                 );
               })}
             </div>
           );
         })}
       </motion.div>
-      <div className="text-xs mt-4 text-center font-Inter px-8 ">
+      <div className="text-xs mt-4 text-center font-Inter px-8 z-40">
         Click on the icons to navigate to download their dedicated app
       </div>
     </div>

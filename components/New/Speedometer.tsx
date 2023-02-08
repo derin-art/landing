@@ -3,6 +3,7 @@ import React from "react";
 import ReactSpeedometer from "react-d3-speedometer";
 import PhoneIcon from "../../public/Icon/PhoneIcon";
 import SpeedBanner from "../SpeedBanner";
+import { motion } from "framer-motion";
 
 function Speedometer() {
   const [needleVal, setNeedleVal] = useState(100);
@@ -17,20 +18,47 @@ function Speedometer() {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
 
+  const setVal = () => {
+    let device = "phone";
+    size[0];
+    console.log("sdsd", size);
+
+    if (size[0] > 1020) {
+      device = "tab";
+    }
+    if (size[0] > 1250) {
+      device = "laptop";
+    }
+    if (device === "phone") {
+      setNeedleVal(150);
+    } else if (device === "tab") {
+      setNeedleVal(100);
+    } else {
+      setNeedleVal(200);
+    }
+  };
+
   return (
-    <div className="font-Neue w-full h-2/5 absolute -bottom-1/3   flex flex-col relative overflow-hidden">
-      <div className=" absolute  w-full">
-        <SpeedBanner></SpeedBanner>
-      </div>
+    <motion.div
+      onViewportEnter={() => {
+        console.log("e");
+        setVal();
+      }}
+      onViewportLeave={() => {
+        setNeedleVal(0);
+      }}
+      className="font-Neue w-full h-3/5 absolute   flex flex-col relative overflow-hidden"
+    >
       <ReactSpeedometer
         maxValue={300}
-        value={200}
+        value={needleVal}
         needleColor="red"
-        startColor="#1a1a1a"
+        startColor="#1d1d1e"
         segments={3}
         endColor="#242424"
         fluidWidth={true}
         forceRender={true}
+        needleTransitionDuration={1400}
         customSegmentLabels={[
           {
             color: "#555",
@@ -44,7 +72,7 @@ function Speedometer() {
           },
         ]}
       ></ReactSpeedometer>
-    </div>
+    </motion.div>
   );
 }
 
