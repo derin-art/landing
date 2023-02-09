@@ -56,7 +56,7 @@ export default function NewPage() {
         >
           {images.map((item) => {
             return (
-              <div className="w-full">
+              <div key={item.name} className="w-full">
                 <div className="w-full relative">
                   {" "}
                   <Image

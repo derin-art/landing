@@ -56,12 +56,12 @@ export default function FourthPage() {
       <div className="fadeII h-full w-14 right-0 absolute bottom-0 z-30 hidden xl:block "></div>
 
       <div className=" xl:hidden  w-full h-3/5 absolute -bottom-20 xsm:-bottom-1/4 lg:bottom-0 xl:rotate-90 xl:h-full  ">
-        <SpeedBanner></SpeedBanner>
-        <Speedometer></Speedometer>
+        <SpeedBanner key={"12"}></SpeedBanner>
+        <Speedometer key={"1212"}></Speedometer>
       </div>
       <div className="xl:block hidden wiH  absolute top-0 propRight xl:-rotate-90 h-full  ">
-        <SpeedBanner></SpeedBanner>
-        <Speedometer></Speedometer>
+        <SpeedBanner key={"121"}></SpeedBanner>
+        <Speedometer key={"5"}></Speedometer>
       </div>
       <motion.div
         initial={{ rotate: 35, x: 50 }}
@@ -84,7 +84,7 @@ export default function FourthPage() {
               {svsvHey()}
             </motion.div>
             <div className="font-Neue text-3xl mt-4 z-40 absolute top-[160px]  w-full text-black sm:w-[320px] flex items-center justify-center space-x-2">
-              We're <span className="text-white ">Every</span>where.
+              We&apos;re <span className="text-white ">Every</span>where.
             </div>
             I
           </div>

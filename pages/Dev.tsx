@@ -95,7 +95,7 @@ export default function Dev() {
       items-center justify-center  h-full relative overflow-hidden bg-white"
       >
         <div className="absolute top-20 font-Neue text-3xl text-black lg:text-4xl lg:right-10 right-2 z-30 text-right w-4/5">
-          Api's serving multiple large{" "}
+          Api&apos;s serving multiple large{" "}
           <span className="text-gray-500">companies</span>{" "}
           <div className=" flex items-end justify-end">
             <button
@@ -107,7 +107,7 @@ export default function Dev() {
               }}
               className="block p-2 rounded-full bg-black text-white text-base lg:text-base flex items-center justify-center"
             >
-              Explor3 Api's{" "}
+              Explor3 Api&apos;s{" "}
               <HoverArrow
                 initialFill="fill-green-500"
                 hoverFill="fill-venomLime"

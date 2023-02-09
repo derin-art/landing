@@ -236,7 +236,7 @@ const SaturnSpeaks = (props: {
   );
 };
 
-export default function () {
+export default function DevThree() {
   return (
     <div className="flex w-full h-screen items-center justify-center border ">
       {typeof window !== "undefined" && (

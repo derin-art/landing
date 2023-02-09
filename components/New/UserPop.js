@@ -46,12 +46,6 @@ export default function UserPop() {
     new LeaderLine(middleRef.current, endRef.current, lineOptions); */
   }, []);
 
-  const RectComp = forwardRef(({ children, ...props }, ref) => (
-    <div ref={ref} {...props}>
-      {children}
-    </div>
-  ));
-
   return (
     <div className="w-full h-full">
       <div className="flex lg:hidden space-x-4 w-full h-full relative items-center ">
