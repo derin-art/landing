@@ -129,7 +129,7 @@ const PointRings = (props: {
 };
 
 const GlobeMesh = ({ count = 1000 }) => {
-  const ref2 = useRef<THREE.Mesh>(null!);
+  const ref2: any = useRef<THREE.Mesh>(null!);
   useFrame(() => (ref2.current.rotation.x = ref2.current.rotation.z += 0.01));
 
   const vertices = [];
