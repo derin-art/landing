@@ -44,9 +44,6 @@ function Speedometer() {
         console.log("e");
         setVal();
       }}
-      onViewportLeave={() => {
-        setNeedleVal(0);
-      }}
       className="font-Neue w-full h-3/5 absolute   flex flex-col relative overflow-hidden"
     >
       <ReactSpeedometer

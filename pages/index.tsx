@@ -91,7 +91,7 @@ export default function Home() {
         <FourthPage></FourthPage>
         <Footer></Footer>
       </div>
-      <div className="hidden relative">
+      {/*   <div className="hidden relative">
         <div className="flex flex-col items-center relative justify-center stackH overflow-hidden w-full bg-white">
           <div className="absolute top-20 lg:top-32 text-3xl lg:text-4xl font-Neue left-2 lg:left-10 z-30">
             Built to be to <span className="text-gray-500">powerful</span> and{" "}
@@ -165,7 +165,7 @@ export default function Home() {
         <div className="w-full h-screen bg-white relative">
           <ThreePage></ThreePage>{" "}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

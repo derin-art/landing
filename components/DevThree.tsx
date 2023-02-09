@@ -278,7 +278,7 @@ export default function DevThree() {
               rotateSpeed={0.01}
             ></PointRings>
             <PointRings
-              key={"1"}
+              key={"12"}
               size={[10, 13, 40]}
               rotation={[Math.PI / 0.6, 4, 4]}
               position={[0, 0, 0]}

@@ -18,7 +18,7 @@ export default function Footer() {
             );
           })}
         </div>
-        <button className="xsm:text-6xl text-5xl xl:text-8xl px-4 border p-4 bg-teal-600 text-white border-gray-600 rounded-full h-fit">
+        <button className="xsm:text-6xl text-5xl xl:text-8xl px-4 border p-4 bg-white text-black border-gray-600 rounded-full h-fit">
           NewsLetter
         </button>
       </div>

@@ -127,9 +127,9 @@ export default function FifthPage() {
         onViewportEnter={() => {
           setTrigger(true);
         }}
-        onViewportLeave={() => {
+        /*     onViewportLeave={() => {
           setTrigger(false);
-        }}
+        }} */
         className="flex  space-x-2"
       >
         {svgPaths.map((item, index) => {
