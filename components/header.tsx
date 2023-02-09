@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import MenuIcon from "../public/Icon/MenuIcon";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -22,6 +23,8 @@ export default function Header() {
   };
   const randoms = ["Contact", "Products", "About", "Api"];
   const things = ["menu"];
+  const router = useRouter();
+  const isHome = router.pathname === "/";
   return (
     <div className="flex relative  p-2 font-inter text-sm backdrop-blur-sm border-b border-ultraGray h-10 items-center justify-center ">
       <div
@@ -65,9 +68,11 @@ export default function Header() {
       </div>
       <Link
         className="absolute left-20 top-1 font-Neue p-1 border border-ultraGray bg-venomLime rounded-full"
-        href={"/Dev"}
+        href={!isHome ? "/" : "/Dev"}
       >
-        Real Link - Navigate to dev's page
+        {!isHome
+          ? "Navigate to User Homepage"
+          : "    Real Link - Navigate to dev's page"}
       </Link>
 
       <AnimatePresence>

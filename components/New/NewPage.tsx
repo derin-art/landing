@@ -126,7 +126,7 @@ export default function NewPage() {
             {images[2].name}
           </div>
           <div className="absolute ">
-            {SlantedArrow("fill-gray-800", "100%", "100%")}
+            {SlantedArrow("fill-black", "100%", "100%")}
           </div>
         </div>
 

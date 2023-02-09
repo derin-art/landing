@@ -22,26 +22,28 @@ export default function SecondPage() {
         <div className="flex space-x-4 mb-4 z-30">
           {play.map((svg) => {
             return (
-              <motion.svg
-                key={svg.name}
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="50"
-                className="border rounded-2xl p-2 hoverG border-gray-600"
-                height="50"
-                fill="none"
-              >
-                <path fill="rgba(255, 255, 255, 0)" d="M0 0h24v24H0z" />
-                <motion.path
-                  stroke="rgb(82 82 82)"
-                  strokeWidth={0.5}
-                  strokeLinecap="round"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 1.6 }}
-                  d={svg.path}
-                />
-              </motion.svg>
+              <button key={svg.name}>
+                <motion.svg
+                  key={svg.name}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="50"
+                  className="border rounded-2xl p-2 hoverG border-gray-600"
+                  height="50"
+                  fill="none"
+                >
+                  <path fill="rgba(255, 255, 255, 0)" d="M0 0h24v24H0z" />
+                  <motion.path
+                    stroke="rgb(82 82 82)"
+                    strokeWidth={0.5}
+                    strokeLinecap="round"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ duration: 1.6 }}
+                    d={svg.path}
+                  />
+                </motion.svg>
+              </button>
             );
           })}
         </div>
@@ -56,25 +58,27 @@ export default function SecondPage() {
         <div className="flex space-x-4 mb-4 mr-4 ">
           {play.map((svg) => {
             return (
-              <motion.svg
-                key={svg.name}
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="50"
-                className="border rounded-2xl p-2 hoverG duration-300 border-gray-500"
-                height="50"
-                fill="none"
-              >
-                <path fill="rgba(255, 255, 255, 0)" d="M0 0h24v24H0z" />
-                <motion.path
-                  stroke="rgb(82 82 82)"
-                  strokeWidth={0.5}
-                  strokeLinecap="round"
-                  initial={{ pathLength: 1 }}
-                  transition={{ duration: 1.6 }}
-                  d={svg.path}
-                />
-              </motion.svg>
+              <button key={svg.name}>
+                <motion.svg
+                  key={svg.name}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="50"
+                  className="border rounded-2xl p-2 hoverG duration-300 border-gray-500"
+                  height="50"
+                  fill="none"
+                >
+                  <path fill="rgba(255, 255, 255, 0)" d="M0 0h24v24H0z" />
+                  <motion.path
+                    stroke="rgb(82 82 82)"
+                    strokeWidth={0.5}
+                    strokeLinecap="round"
+                    initial={{ pathLength: 1 }}
+                    transition={{ duration: 1.6 }}
+                    d={svg.path}
+                  />
+                </motion.svg>
+              </button>
             );
           })}
         </div>

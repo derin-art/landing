@@ -112,8 +112,12 @@ a {
  */
 
 :root {
-  --cursor-color: rgb(226, 46, 46);
+  --cursor-color: rgb(238, 19, 19);
   --blur: 3px;
+  --innerBlur: 2px;
+  --outerColor: rgba(226, 79, 46, 0.4);
+  --size: 40,
+  --outerSize: 25
 }
 
 .blurry-gradient {
@@ -539,4 +543,10 @@ a {
   .stackH {
     height: 100vh;
   }
+}
+
+.sty {
+  position: sticky;
+  top: 0px;
+  color: #1a1a1a;
 }

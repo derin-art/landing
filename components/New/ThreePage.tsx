@@ -54,7 +54,7 @@ const GlobeMesh = ({ count = 1000 }) => {
 
       <sphereBufferGeometry
         attach="geometry"
-        args={[window.innerWidth / 130, 40, 42]}
+        args={[window.innerWidth / 130, 40, 22]}
       >
         {" "}
       </sphereBufferGeometry>

@@ -4,17 +4,7 @@ export default function Footer() {
   const buttons = ["FAQ", "SOCIALS", "LEGAL"];
   var bodyStyles = typeof document === "undefined" ? null : document.body.style;
   return (
-    <footer
-      onMouseOver={() => {
-        bodyStyles &&
-          bodyStyles.setProperty("--cursor-color", "rgb(226, 46, 46)");
-      }}
-      onMouseLeave={() => {
-        bodyStyles &&
-          bodyStyles.setProperty("--cursor-color", "rgb(226, 46, 46)");
-      }}
-      className=" h-screen w-full flex flex-col items-center  justify-center xl:justify-start  "
-    >
+    <footer className=" h-screen w-full flex flex-col items-center  justify-center xl:justify-start  ">
       <div className=" font-Neue flex flex-col  space-y-4 xl:flex-row xl:w-4/5 xl:justify-between xl:pt-32 lg:hidden">
         <div className="flex flex-col space-y-4 xl:space-y-10">
           {buttons.map((item) => {

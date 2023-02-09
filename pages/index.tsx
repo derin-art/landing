@@ -69,8 +69,19 @@ export default function Home() {
     }, 300);
   }, []);
 
+  var bodyStyles = typeof document === "undefined" ? null : document.body.style;
+
   return (
-    <div className="scroll-smooth dark-mode  z-30 w-full h-full font-lora items-center justify-center relative">
+    <div
+      onMouseOver={() => {
+        bodyStyles &&
+          bodyStyles.setProperty("--cursor-color", "rgb(238, 19, 19)");
+        bodyStyles?.setProperty("--blur", "3px");
+        bodyStyles?.setProperty("--innerBlur", "2px");
+        bodyStyles?.setProperty("--outerColor", "rgba(226, 79, 46, 0.4)");
+      }}
+      className="scroll-smooth dark-mode  z-30 w-full h-full font-lora items-center justify-center relative"
+    >
       <div className="hidde">
         <div className="bg"></div>
         <SecondPage></SecondPage>
