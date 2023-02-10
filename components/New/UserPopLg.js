@@ -48,30 +48,30 @@ export default function UserPop() {
 
   return (
     <div className="w-full h-full">
-      <div className="flex lg:hidden space-x-4 w-full h-full relative items-center ">
+      <div className="lg:flex space-x-4 hidden w-full h-full relative items-center ">
         <Image
           src={Face3.src}
-          className="  z-30 absolute left-10 top-2/4 rounded-lg"
-          width={30}
-          height={30}
+          className="  z-30 absolute left-1/3 top-2/4 rounded-lg"
+          width={40}
+          height={40}
           unoptimized={true}
           alt="User"
-          ref={startRef}
-          id="1"
+          ref={startRef1}
+          id="4"
         ></Image>
         <Xarrow
-          start={"2"} //can be react ref
-          end={"1"} //or an id
+          start={startRef1} //can be react ref
+          end={middleRe3} //or an id
           color="#4cf7029e"
           path="smooth"
           showHead={false}
           showTail={false}
-          curveness={2}
+          curveness={1.3}
           dashness={true}
         />
         <Xarrow
-          start={"3"} //can be react ref
-          end={"2"} //or an id
+          start={middleRe3} //can be react ref
+          end={endRef2} //or an id
           color="#4cf7029e"
           path="smooth"
           dashness={true}
@@ -81,23 +81,23 @@ export default function UserPop() {
         />
         <Image
           src={Face1.src}
-          id="2"
-          className="absolute right-14 top-1/4 rounded-lg"
-          width={30}
-          height={30}
-          ref={middleRef}
+          id="5"
+          className="absolute right-1/4  top-1/4 rounded-lg"
+          width={40}
+          height={40}
+          ref={middleRe3}
           unoptimized={true}
           alt="User"
         ></Image>
-        {GlobeIcon("fill-ultraGray  ", "100%", "100%")}
+        {GlobeIcon("fill-ultraGray hidden xs:block  ", "100%", "100%")}
 
         <Image
-          ref={endRef}
-          id="3"
+          ref={endRef2}
+          id="6"
           src={Face2.src}
-          className=" absolute right-1/3 bottom-20 rounded-lg"
-          width={30}
-          height={30}
+          className=" absolute right-1/3 rounded-lg"
+          width={40}
+          height={40}
           unoptimized={true}
           alt="User"
         ></Image>

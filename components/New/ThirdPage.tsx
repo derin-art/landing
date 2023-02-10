@@ -5,6 +5,8 @@ import Face4 from "../../public/images/Face4.jpg";
 import Face5 from "../../public/images/Face5.jpg";
 import dynamic from "next/dynamic";
 const UserPop = dynamic(() => import("./UserPop"), { ssr: false });
+
+const UserPopLg = dynamic(() => import("./UserPopLg"), { ssr: false });
 import Image from "next/image";
 import GlobeIcon from "../../public/Icon/globeIcon";
 import { useState, useLayoutEffect } from "react";
@@ -84,7 +86,7 @@ export default function ThirdPage() {
       </div>
       <div className="lg:flex hidden   space-x-2 items-center justify-center">
         <motion.div className="absolute -left-1/4 w-full -bottom-2/4">
-          {!isMobile && <UserPop key={"Second"}></UserPop>}
+          {!isMobile && <UserPopLg></UserPopLg>}
         </motion.div>
 
         <div className="font-Neue z-30 text-white flex flex-col absolute w-2/5 xl:w-3/5 text-6xl right-10 xl:left-none top-20  text-right">
