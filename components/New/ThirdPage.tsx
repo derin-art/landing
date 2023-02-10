@@ -7,7 +7,9 @@ import dynamic from "next/dynamic";
 const UserPop = dynamic(() => import("./UserPop"), { ssr: false });
 import Image from "next/image";
 import GlobeIcon from "../../public/Icon/globeIcon";
+import { useState, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 export default function ThirdPage() {
   const images = [
@@ -20,6 +22,20 @@ export default function ThirdPage() {
       { img: Face2, name: "Face2" },
     ],
   ];
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
+  const { width, height } = useMediaQuery();
+
+  const isMobile = width ? width < 1023 : true;
+
   return (
     <div className="h-screen w-full bg-ultraBlack text-venomLime flex items-center flex-col justify-center relative overflow-hidden relative">
       <div className="font-Neue text-3xl mb-4 p-8 ml-6 flex lg:hidden flex-col  lg:text-6xl lg:w-3/5  w-screen lg:text-left absolute top-10">
@@ -39,7 +55,7 @@ export default function ThirdPage() {
 
       <div className="  lg:hidden  flex flex-col  lg:items-center justify-between ">
         <div className=" w-screen flex items-center justify-center -bottom-18  absolute -left-2 ">
-          <UserPop></UserPop>
+          {isMobile && <UserPop key={"first"}></UserPop>}
         </div>
 
         <div className="flex   space-x-2   lg:hidden hidden">
@@ -68,7 +84,7 @@ export default function ThirdPage() {
       </div>
       <div className="lg:flex hidden   space-x-2 items-center justify-center">
         <motion.div className="absolute -left-1/4 w-full -bottom-2/4">
-          <UserPop></UserPop>
+          {!isMobile && <UserPop key={"Second"}></UserPop>}
         </motion.div>
 
         <div className="font-Neue z-30 text-white flex flex-col absolute w-2/5 xl:w-3/5 text-6xl right-10 xl:left-none top-20  text-right">

@@ -89,7 +89,7 @@ export default function UserPop() {
           unoptimized={true}
           alt="User"
         ></Image>
-        {GlobeIcon("fill-ultraGray  ", "w-full", "w-full")}
+        {GlobeIcon("fill-ultraGray  ", "100%", "100%")}
 
         <Image
           ref={endRef}
@@ -143,7 +143,7 @@ export default function UserPop() {
           unoptimized={true}
           alt="User"
         ></Image>
-        {GlobeIcon("fill-ultraGray hidden xs:block  ", "w-full", "w-full")}
+        {GlobeIcon("fill-ultraGray hidden xs:block  ", "100%", "100%")}
 
         <Image
           ref={endRef2}
