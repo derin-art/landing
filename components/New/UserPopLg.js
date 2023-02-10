@@ -56,12 +56,11 @@ export default function UserPop() {
           height={40}
           unoptimized={true}
           alt="User"
-          ref={startRef1}
-          id="4"
+          id="4LT"
         ></Image>
         <Xarrow
-          start={startRef1} //can be react ref
-          end={middleRe3} //or an id
+          start={"4LT"} //can be react ref
+          end={"5LT"} //or an id
           color="#4cf7029e"
           path="smooth"
           showHead={false}
@@ -70,8 +69,8 @@ export default function UserPop() {
           dashness={true}
         />
         <Xarrow
-          start={middleRe3} //can be react ref
-          end={endRef2} //or an id
+          start={"5LT"} //can be react ref
+          end={"6LT"} //or an id
           color="#4cf7029e"
           path="smooth"
           dashness={true}
@@ -81,19 +80,17 @@ export default function UserPop() {
         />
         <Image
           src={Face1.src}
-          id="5"
+          id="5LT"
           className="absolute right-1/4  top-1/4 rounded-lg"
           width={40}
           height={40}
-          ref={middleRe3}
           unoptimized={true}
           alt="User"
         ></Image>
         {GlobeIcon("fill-ultraGray hidden xs:block  ", "100%", "100%")}
 
         <Image
-          ref={endRef2}
-          id="6"
+          id="6LT"
           src={Face2.src}
           className=" absolute right-1/3 rounded-lg"
           width={40}

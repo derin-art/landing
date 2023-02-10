@@ -17,9 +17,7 @@ export default function UserPop() {
   const startRef = useRef(null);
   const endRef = useRef(null);
   const middleRef = useRef(null);
-  const startRef1 = useRef(null);
-  const endRef2 = useRef(null);
-  const middleRe3 = useRef(null);
+
   const images = [
     { img: Face3, name: "Face3" },
     { img: Face4, name: "Face4" },
