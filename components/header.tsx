@@ -102,7 +102,7 @@ export default function Header() {
           isHome ? "text-gray-600" : "text-gray-400"
         }`}
       >
-        Navigate to {isHome ? " Dev" : "User"} page
+        CLICK HERE!
       </div>
       <Link
         className="absolute items-center right-[60px] z-10 flex w-2/4 max-w-[120px] top-1 font-Neue p-1  rounded-full"
